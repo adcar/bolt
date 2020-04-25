@@ -1,10 +1,11 @@
 import React from "react";
+import GoogleButton from "react-google-button";
 import { signOut } from "../api/auth";
 
 export default function Login({ onSignIn }) {
   return (
     <>
-      <button onClick={onSignIn}>Authorize</button>
+      <GoogleButton onClick={onSignIn} />
       <button onClick={signOut}>Sign out</button>
     </>
   );

@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { mountScripts } from "../api/scripts";
-import { checkSignInStatus, signIn } from "../api/auth";
+import { checkSignInStatus, signIn, signOut } from "../api/auth";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
 const Login = dynamic(() => import("../components/Login"), { ssr: false });
 
 export default function Home() {
+  const [isSignedIn, setSignIn] = useState(false);
   useEffect(() => {
     mountScripts().then(init);
   }, []);
@@ -19,20 +20,18 @@ export default function Home() {
     checkSignInStatus()
       .then(onSignInSuccess)
       .catch(e => {
-        console.error("Failure: " + JSON.stringify(e));
+        setSignIn(false);
+        console.log("Not sign in false: " + JSON.stringify(e));
       });
   }
 
   function onSignIn() {
-    signIn()
-      .then(onSignInSuccess)
-      .catch(e => {
-        console.error("Failure: " + JSON.stringify(e));
-      });
+    signIn().then(onSignInSuccess);
   }
 
   function onSignInSuccess(googleUser) {
     console.log("sign in success: " + JSON.stringify(googleUser));
+    setSignIn(true);
   }
 
   return (
@@ -42,9 +41,8 @@ export default function Home() {
 
         {/*<link rel="icon" href="/favicon.ico" />*/}
       </Head>
-
-      <h1>Login with Gmail</h1>
-      <Login onSignIn={onSignIn} />
+      Logged in? {JSON.stringify(isSignedIn)}
+      <Login onSignIn={onSignIn} isSignedIn={isSignedIn} />
     </div>
   );
 }
