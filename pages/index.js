@@ -1,11 +1,11 @@
 import React from "react";
-import dynamic from "next/dynamic";
-const Auth = dynamic(() => import("../components/Auth"), { ssr: false });
+import LogIn from "../components/SignIn";
 
-export default function AuthPage({ onLogin }) {
+export default function SplashPage({ onSignIn }) {
   return (
     <div className="container">
-      <Auth onLogin={onLogin} />
+      <h1>Splash page here</h1>
+      <LogIn onSignIn={onSignIn} />
     </div>
   );
 }

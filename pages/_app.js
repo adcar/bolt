@@ -1,8 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SWRConfig } from "swr";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { checkSignInStatus } from "../api/auth";
 
 function MyApp({ Component, pageProps }) {
   const [token, setToken] = useState("");
+  const router = useRouter();
+  useEffect(() => {
+    init();
+  }, []);
+
+  function init() {
+    gapi.load("client:auth2", initClient);
+  }
+
+  function initClient() {
+    checkSignInStatus()
+      .then(onSignInSuccess)
+      .catch(() => {
+        router.push("/");
+      });
+  }
+
+  function onSignInSuccess(googleUser) {
+    setToken(googleUser["tc"]["access_token"]);
+    router.push("/dashboard");
+  }
+
   return (
     <SWRConfig
       value={{
@@ -16,7 +41,12 @@ function MyApp({ Component, pageProps }) {
           }).then(res => res.json())
       }}
     >
-      <Component {...pageProps} onLogin={setToken} />;
+      <Head>
+        <title>Bolt</title>
+        <script src="https://apis.google.com/js/api.js" />
+      </Head>
+
+      <Component {...pageProps} onSignIn={setToken} onSignOut={setToken} />
     </SWRConfig>
   );
 }
