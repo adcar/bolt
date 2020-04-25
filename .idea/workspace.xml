@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+    <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="email page rerenders to the dashboard">
+      <change beforePath="$PROJECT_DIR$/components/EmailPreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/EmailPreview.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/details/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/details/[id].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -298,6 +298,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="487" y="-100" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587849257094" />
+    <state x="449" y="181" key="FileChooserDialogImpl" timestamp="1587850396924">
+      <screen x="0" y="0" width="1333" height="849" />
+    </state>
+    <state x="449" y="181" key="FileChooserDialogImpl/0.0.1333.849@0.0.1333.849" timestamp="1587850396924" />
     <state x="819" y="420" key="Github.ShareDialog" timestamp="1587769192669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

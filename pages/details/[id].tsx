@@ -1,15 +1,54 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
+import {useRouter} from 'next/router'
+import {MdArrowBack, MdExpandLess, MdExpandMore} from "react-icons/md";
+
 
 export default function id(props) {
-  console.log(props);
-  useEffect(() => {
-    const emails = localStorage.getItem("emails");
-    console.log(JSON.parse(emails));
-  }, []);
+    let emails;
+    const router = useRouter();
+    const {id} = router.query;
+    let thisEmail;
+    useEffect(() => {
+        emails = localStorage.getItem("emails");
+        console.log(JSON.parse(emails));
+        match();
+    }, []);
 
-  return (
-    <div>
-      <p>This is a email page.@#$%^&*(</p>
-    </div>
-  );
+    function match() {
+        for (let i = 0; i < emails.length; i--) {
+            if (emails[i].id == id) {
+                thisEmail == emails[i];
+                break;
+            }
+        }
+    }
+
+    console.log(id);
+
+
+    return (
+        <div>
+            <div className="leftPanel">
+                <MdArrowBack/>
+                <MdExpandLess/>
+                <MdExpandMore/>
+            </div>
+            <div className="centerPanel">
+                <div className="emailSubject">
+                    This is supposed to be a email header
+                </div>
+                <div className="content">
+                    This is a e email content
+                    HI,
+
+
+                    Thanks,
+                    Bye
+                </div>
+            </div>
+            <div className="rightPanel">
+
+            </div>
+        </div>
+    );
 }

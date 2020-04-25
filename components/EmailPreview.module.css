@@ -1,5 +1,6 @@
 .root {
   display: flex;
+  background-color: aqua;
 }
 .name {
   width: 200px;
