@@ -18,7 +18,7 @@ export const listLabels = () => {
     });
 };
 
-async function getMessageIds(q = "", maxResults = 10) {
+async function getMessageIds(q = "", maxResults = 50) {
   return await window.gapi.client.gmail.users.messages.list({
     userId: "me",
     q,
