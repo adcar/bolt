@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { mountScripts } from "../api/scripts";
 import { checkSignInStatus, signIn } from "../api/auth";
 import Head from "next/head";
@@ -6,7 +7,8 @@ import dynamic from "next/dynamic";
 
 const Login = dynamic(() => import("../components/Login"), { ssr: false });
 
-export default function Home({ onLogin }) {
+export default function AuthPage({ onLogin }) {
+  const router = useRouter();
   const [isSignedIn, setSignIn] = useState(false);
   useEffect(() => {
     mountScripts().then(init);
@@ -21,7 +23,7 @@ export default function Home({ onLogin }) {
       .then(onSignInSuccess)
       .catch(e => {
         setSignIn(false);
-        console.log("Sign in:  " + JSON.stringify(e));
+        console.log("Sign in failed:  " + JSON.stringify(e));
       });
   }
 
@@ -30,11 +32,9 @@ export default function Home({ onLogin }) {
   }
 
   function onSignInSuccess(googleUser) {
-    console.log(
-      "sign in success: " + JSON.stringify(googleUser["tc"]["access_token"])
-    );
     setSignIn(true);
     onLogin(googleUser["tc"]["access_token"]);
+    router.push("/dashboard");
   }
 
   return (
