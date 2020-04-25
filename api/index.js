@@ -37,10 +37,11 @@ async function getMessage(messageId) {
 }
 
 export async function getMessages() {
+  let msgs = [];
   const res = await getMessagesRaw();
   for (const { id } of res.result.messages) {
     const msg = await getMessage(id);
-    console.log(msg.result.payload);
+    // console.log(msg.result);
     let data;
     if (
       msg.result.payload.parts !== undefined &&
@@ -50,10 +51,12 @@ export async function getMessages() {
     } else if (msg.result.payload.body.size > 0) {
       data = msg.result.payload.body.data;
     }
-
-    console.log(decode(data));
-    // console.log(atob(decode(msg.result.payload.parts[0].body.data)));
+    msgs.push({
+      body: decode(data),
+      headers: msg.result.payload.headers
+    });
   }
+  return msgs;
 }
 
 function decode(input) {
