@@ -2,7 +2,7 @@ export const signIn = () => {
   return window.gapi.auth2.getAuthInstance().signIn();
 };
 
-export const initGmailClient = (apiKey, clientId) => {
+export const initGmailClient = () => {
   const API_KEY = "AIzaSyDLGu1Bfrx7uf8GuTZFN4aua8wHTm0-ba4";
   const CLIENT_ID =
     "777825334282-vvt43n3rq71hhac9l9k1d9v5covp3dlr.apps.googleusercontent.com";
@@ -37,15 +37,15 @@ export const checkSignInStatus = () => {
 
         const isSignedIn = googleAuthInstance.isSignedIn.get();
 
+        console.log(googleAuthInstance.currentUser);
+
         if (isSignedIn) {
           // Listen for sign-in state changes.
           googleAuthInstance.isSignedIn.listen(isSignedIn => {
             updateSigninStatus(isSignedIn);
           });
 
-          console.log("AUTH_SUCCESS from checkSignInStatus");
-
-          resolve(googleAuthInstance.currentUser.Ab);
+          resolve(googleAuthInstance.currentUser.je);
         } else {
           reject();
         }
