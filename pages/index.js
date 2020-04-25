@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 const Login = dynamic(() => import("../components/Login"), { ssr: false });
 
-export default function Home() {
+export default function Home({ onLogin }) {
   const [isSignedIn, setSignIn] = useState(false);
   useEffect(() => {
     mountScripts().then(init);
@@ -21,7 +21,7 @@ export default function Home() {
       .then(onSignInSuccess)
       .catch(e => {
         setSignIn(false);
-        console.log("Not sign in false: " + JSON.stringify(e));
+        console.log("Sign in:  " + JSON.stringify(e));
       });
   }
 
@@ -34,6 +34,7 @@ export default function Home() {
       "sign in success: " + JSON.stringify(googleUser["tc"]["access_token"])
     );
     setSignIn(true);
+    onLogin(googleUser["tc"]["access_token"]);
   }
 
   return (
