@@ -7,6 +7,7 @@ import "../styles/vars.css";
 
 function MyApp({ Component, pageProps }) {
   const [token, setToken] = useState("");
+  const [emails, setEmails] = useState(null);
   const router = useRouter();
   useEffect(() => {
     init();
@@ -52,6 +53,7 @@ function MyApp({ Component, pageProps }) {
         onSignIn={setToken}
         onSignOut={setToken}
         token={token}
+        setEmails={setEmails} emails={emails}
       />
     </SWRConfig>
   );
