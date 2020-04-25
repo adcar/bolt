@@ -63,6 +63,7 @@ export async function getMessages(pageToken) {
         data = msg.result.payload.body.data;
       }
       messages.push({
+        id: msg.result.id,
         body: decode(data),
         headers: msg.result.payload.headers,
         snippet: msg.result.snippet

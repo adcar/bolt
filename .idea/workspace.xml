@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587767089469</updated>
       <workItem from="1587767091407" duration="778000" />
-      <workItem from="1587768597802" duration="32479000" />
+      <workItem from="1587768597802" duration="32988000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587769177253</created>
@@ -233,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587844253451</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Emails stored in _app">
+      <created>1587844557669</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1587844557669</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,17 +268,18 @@
     <MESSAGE value="Changed to 50 emails" />
     <MESSAGE value="Got infinite scroll working!" />
     <MESSAGE value="Added (no subject)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added (no subject)" />
+    <MESSAGE value="Emails stored in _app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Emails stored in _app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587768800086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587768800086" />
-    <state x="747" y="-139" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587844253381">
+    <state x="745" y="-157" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587844557589">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="747" y="-139" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587844253381" />
+    <state x="745" y="-157" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587844557589" />
     <state x="819" y="420" key="Github.ShareDialog" timestamp="1587769192669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -345,10 +352,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="369" y="141" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587834495546" />
-    <state x="509" y="-139" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587844254671">
+    <state x="507" y="-157" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587844559033">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="509" y="-139" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587844254671" />
+    <state x="507" y="-157" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587844559033" />
     <state x="738" y="197" width="433" height="645" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587769398733">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
