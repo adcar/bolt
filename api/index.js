@@ -18,9 +18,10 @@ export const listLabels = () => {
     });
 };
 
-async function getMessageIds(q = "", maxResults = 50) {
+async function getMessageIds(pageToken, q = "", maxResults = 30) {
   return await window.gapi.client.gmail.users.messages.list({
     userId: "me",
+    pageToken,
     q,
     maxResults
   });
@@ -34,10 +35,10 @@ async function getMessage(messageId) {
   });
 }
 
-export async function getMessages() {
+export async function getMessages(pageToken) {
   let promises = [];
-  const res = await getMessageIds();
-
+  const res = await getMessageIds(pageToken);
+  const nextPageToken = res.result.nextPageToken;
   for (const { id } of res.result.messages) {
     promises.push(getMessage(id));
   }
@@ -45,6 +46,7 @@ export async function getMessages() {
   await Promise.all(promises).then(msgs => {
     for (const msg of msgs) {
       let data;
+
       if (
         msg.result.payload.parts !== undefined &&
         msg.result.payload.parts.length > 0
@@ -67,7 +69,7 @@ export async function getMessages() {
       });
     }
   });
-  return messages;
+  return { nextPageToken, messages };
 }
 
 function decode(input) {

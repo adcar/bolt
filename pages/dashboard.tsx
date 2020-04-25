@@ -4,16 +4,31 @@ import { getMessages } from "../api";
 import Emails from "../components/Emails";
 export default function dashboard({ token }) {
   const [emails, setEmails] = useState(null);
+  const [nextPageToken, setNextPageToken] = useState("");
   useEffect(() => {
     if (token !== "") {
-      getMessages().then(setEmails);
+      getMessages("").then(res => {
+        setEmails(res.messages);
+        setNextPageToken(res.nextPageToken);
+      });
     }
   }, [token]);
 
+  function handleLoadMore() {
+    console.log("handling loading more...");
+    getMessages(nextPageToken).then(res => {
+      setEmails([...emails, ...res.messages]);
+      setNextPageToken(res.nextPageToken);
+    });
+  }
   return (
     <>
       <SignOut />
-      {emails !== null ? <Emails emails={emails} /> : "Loading..."}
+      {emails !== null ? (
+        <Emails emails={emails} onLoadMore={handleLoadMore} />
+      ) : (
+        "Loading..."
+      )}
     </>
   );
 }
