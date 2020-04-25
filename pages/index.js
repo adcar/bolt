@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { mountScripts } from "../api/scripts";
-import { checkSignInStatus, signIn, signOut } from "../api/auth";
+import { checkSignInStatus, signIn } from "../api/auth";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
@@ -30,7 +30,9 @@ export default function Home() {
   }
 
   function onSignInSuccess(googleUser) {
-    console.log("sign in success: " + JSON.stringify(googleUser));
+    console.log(
+      "sign in success: " + JSON.stringify(googleUser["tc"]["access_token"])
+    );
     setSignIn(true);
   }
 
