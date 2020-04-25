@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/details/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EmailPreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/EmailPreview.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EmailPreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/EmailPreview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1b0RamF6yjEVXwM6eyk0EB3ytcZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -92,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587767089469</updated>
       <workItem from="1587767091407" duration="778000" />
-      <workItem from="1587768597802" duration="32988000" />
+      <workItem from="1587768597802" duration="35033000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587769177253</created>
@@ -241,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587844557669</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add ID to email type">
+      <created>1587845216947</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1587845216947</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,18 +277,18 @@
     <MESSAGE value="Got infinite scroll working!" />
     <MESSAGE value="Added (no subject)" />
     <MESSAGE value="Emails stored in _app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Emails stored in _app" />
+    <MESSAGE value="Add ID to email type" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ID to email type" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587768800086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587768800086" />
-    <state x="296" y="0" width="572" height="849" key="CommitChangelistDialog2" timestamp="1587845846694">
-      <screen x="0" y="0" width="1333" height="849" />
+    <state x="743" y="-175" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587845216796">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="296" y="0" width="572" height="849" key="CommitChangelistDialog2/0.0.1333.849@0.0.1333.849" timestamp="1587845846694" />
-    <state x="745" y="-157" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587844557589" />
+    <state x="743" y="-175" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587845216796" />
     <state x="819" y="420" key="Github.ShareDialog" timestamp="1587769192669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -351,22 +357,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1897" height="331" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587774486972" />
+    <state x="663" y="233" width="584" height="574" key="MultipleFileMergeDialog" timestamp="1587845901377">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="663" y="233" width="584" height="574" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587845901376" />
     <state x="369" y="141" key="SettingsEditor" timestamp="1587834495546">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="369" y="141" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587834495546" />
-    <state x="507" y="-157" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587844559033">
+    <state x="505" y="-175" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587845218340">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="507" y="-157" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587844559033" />
+    <state x="505" y="-175" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587845218340" />
     <state x="738" y="197" width="433" height="645" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587769398733">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="738" y="197" width="433" height="645" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587769398733" />
-    <state x="782" y="232" width="665" height="560" key="find.popup" timestamp="1587843957071">
+    <state x="748" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587845896004">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="782" y="232" width="665" height="560" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587843957071" />
+    <state x="748" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587845896004" />
+    <state x="782" y="232" width="665" height="560" key="find.popup" timestamp="1587845975728">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="782" y="232" width="665" height="560" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587845975728" />
     <state x="622" y="251" key="run.anything.popup" timestamp="1587829865822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

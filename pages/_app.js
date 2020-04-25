@@ -13,11 +13,13 @@ function MyApp({ Component, pageProps }) {
     init();
   }, []);
 
+
   function init() {
     gapi.load("client:auth2", initClient);
   }
 
   function initClient() {
+    console.log("Init client");
     checkSignInStatus()
       .then(onSignInSuccess)
       .catch(() => {
@@ -27,7 +29,9 @@ function MyApp({ Component, pageProps }) {
 
   function onSignInSuccess(googleUser) {
     setToken(googleUser["tc"]["access_token"]);
-    router.push("/dashboard");
+    if (router.pathname === "/") {
+      router.push("/dashboard");
+    }
   }
 
   return (
@@ -53,7 +57,8 @@ function MyApp({ Component, pageProps }) {
         onSignIn={setToken}
         onSignOut={setToken}
         token={token}
-        setEmails={setEmails} emails={emails}
+        setEmails={setEmails}
+        emails={emails}
       />
     </SWRConfig>
   );
