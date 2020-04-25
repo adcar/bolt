@@ -14,7 +14,14 @@ export default function EmailPreview({ email }: IProps) {
   const fromName = from.replace(/ <.*/, "");
   //const fromEmail = from.replace(/.*</, "").replace(">", "");
 
-  const subject = email.headers.find(x => x.name === "Subject").value;
+  const subjectObj = email.headers.find(x => x.name === "Subject");
+  let subject;
+  if (subjectObj) {
+    subject = subjectObj.value;
+  } else {
+    subject = "(No subject)";
+  }
+
   const snippetWithEntities = email.snippet;
 
   const entities = new Entities();
