@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587767089469</updated>
       <workItem from="1587767091407" duration="778000" />
-      <workItem from="1587768597802" duration="17261000" />
+      <workItem from="1587768597802" duration="20704000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587769177253</created>
@@ -167,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587827324846</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="List labels in dashboard (testing out stuff)">
+      <created>1587829463542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587829463542</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Move listLabels into API index">
+      <created>1587829544439</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587829544439</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,37 +202,39 @@
     <MESSAGE value="Authentication flow improvements" />
     <MESSAGE value="Convert to TS and add IProps" />
     <MESSAGE value="Upgraded some packages, comitted tsconfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgraded some packages, comitted tsconfig" />
+    <MESSAGE value="List labels in dashboard (testing out stuff)" />
+    <MESSAGE value="Move listLabels into API index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move listLabels into API index" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587768800086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587768800086" />
-    <state x="767" y="41" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587829463485">
+    <state x="765" y="23" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587829544263">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="767" y="41" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587829463485" />
+    <state x="765" y="23" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587829544263" />
     <state x="819" y="420" key="Github.ShareDialog" timestamp="1587769192669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="819" y="420" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587769192669" />
-    <state width="1897" height="266" key="GridCell.Tab.0.bottom" timestamp="1587829412104">
+    <state width="1897" height="266" key="GridCell.Tab.0.bottom" timestamp="1587832277750">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587829412104" />
-    <state width="1897" height="266" key="GridCell.Tab.0.center" timestamp="1587829412103">
+    <state width="1897" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587832277750" />
+    <state width="1897" height="266" key="GridCell.Tab.0.center" timestamp="1587832277750">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="266" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587829412103" />
-    <state width="1897" height="266" key="GridCell.Tab.0.left" timestamp="1587829412103">
+    <state width="1897" height="266" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587832277750" />
+    <state width="1897" height="266" key="GridCell.Tab.0.left" timestamp="1587832277750">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587829412103" />
-    <state width="1897" height="266" key="GridCell.Tab.0.right" timestamp="1587829412104">
+    <state width="1897" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587832277750" />
+    <state width="1897" height="266" key="GridCell.Tab.0.right" timestamp="1587832277750">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587829412104" />
+    <state width="1897" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587832277750" />
     <state width="1897" height="331" key="GridCell.Tab.1.bottom" timestamp="1587774486970">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -270,10 +287,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="371" y="159" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587771587926" />
-    <state x="527" y="23" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587829464882">
+    <state x="525" y="5" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587829545730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="527" y="23" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587829464882" />
+    <state x="525" y="5" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587829545730" />
     <state x="738" y="197" width="433" height="645" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587769398733">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -282,10 +299,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="627" y="263" width="665" height="560" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587825168856" />
-    <state x="622" y="251" key="run.anything.popup" timestamp="1587823945491">
+    <state x="622" y="251" key="run.anything.popup" timestamp="1587829865822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="622" y="251" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587823945491" />
+    <state x="622" y="251" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587829865822" />
     <state x="623" y="242" width="672" height="678" key="search.everywhere.popup" timestamp="1587771478952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
