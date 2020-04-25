@@ -27,7 +27,7 @@ export const initGmailClient = (apiKey, clientId) => {
   });
 };
 
-export const checkSignInStatus = () => {s
+export const checkSignInStatus = () => {
   return new Promise((resolve, reject) => {
     initGmailClient()
       .then(() => {
