@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/dashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
@@ -14,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -81,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587767089469</updated>
       <workItem from="1587767091407" duration="778000" />
-      <workItem from="1587768597802" duration="10724000" />
+      <workItem from="1587768597802" duration="11502000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587769177253</created>
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587822438036</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Redirect to a new page if login successful">
+      <created>1587822892802</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587822892802</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,17 +153,18 @@
     <MESSAGE value="Got Sign in / out working!" />
     <MESSAGE value="Added TypeScript!" />
     <MESSAGE value="Store token in _app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Store token in _app" />
+    <MESSAGE value="Redirect to a new page if login successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redirect to a new page if login successful" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587768800086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587768800086" />
-    <state x="521" y="-40" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587822874880">
+    <state x="519" y="-58" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587822892739">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="521" y="-40" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587822874880" />
+    <state x="519" y="-58" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587822892739" />
     <state x="819" y="420" key="Github.ShareDialog" timestamp="1587769192669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -229,10 +237,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="371" y="159" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587771587926" />
-    <state x="539" y="131" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587822439112">
+    <state x="537" y="113" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587822894518">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="539" y="131" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587822439112" />
+    <state x="537" y="113" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587822894518" />
     <state x="738" y="197" width="433" height="645" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587769398733">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
