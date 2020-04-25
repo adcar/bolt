@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e5a2262-7c56-43f9-8b7a-c816f1913cd2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Emails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -43,7 +46,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v12.13.0/lib/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -86,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587767089469</updated>
       <workItem from="1587767091407" duration="778000" />
-      <workItem from="1587768597802" duration="21016000" />
+      <workItem from="1587768597802" duration="24759000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1587769177253</created>
@@ -186,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587832775257</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Headers and body in getMesages()">
+      <created>1587833222981</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1587833222981</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,17 +219,18 @@
     <MESSAGE value="List labels in dashboard (testing out stuff)" />
     <MESSAGE value="Move listLabels into API index" />
     <MESSAGE value="Console.log all emails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Console.log all emails" />
+    <MESSAGE value="Headers and body in getMesages()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Headers and body in getMesages()" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587768800086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587768800086" />
-    <state x="763" y="5" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587832775046">
+    <state x="759" y="-31" width="803" height="972" key="CommitChangelistDialog2" timestamp="1587836847507">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="763" y="5" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587832775046" />
+    <state x="759" y="-31" width="803" height="972" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587836847507" />
     <state x="819" y="420" key="Github.ShareDialog" timestamp="1587769192669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -288,14 +299,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1897" height="331" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587774486972" />
-    <state x="371" y="159" key="SettingsEditor" timestamp="1587771587926">
+    <state x="369" y="141" key="SettingsEditor" timestamp="1587834495546">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="371" y="159" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587771587926" />
-    <state x="523" y="-13" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587832776137">
+    <state x="369" y="141" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587834495546" />
+    <state x="521" y="-31" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587833224415">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="523" y="-13" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587832776137" />
+    <state x="521" y="-31" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587833224415" />
     <state x="738" y="197" width="433" height="645" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587769398733">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

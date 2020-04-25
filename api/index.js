@@ -1,5 +1,3 @@
-import base64url from "base64url";
-
 export const listLabels = () => {
   window.gapi.client.gmail.users.labels
     .list({
@@ -20,7 +18,7 @@ export const listLabels = () => {
     });
 };
 
-async function getMessagesRaw(q = "", maxResults = 10) {
+async function getMessageIds(q = "", maxResults = 10) {
   return await window.gapi.client.gmail.users.messages.list({
     userId: "me",
     q,
@@ -37,30 +35,42 @@ async function getMessage(messageId) {
 }
 
 export async function getMessages() {
-  let msgs = [];
-  const res = await getMessagesRaw();
+  let promises = [];
+  const res = await getMessageIds();
+
   for (const { id } of res.result.messages) {
-    const msg = await getMessage(id);
-    // console.log(msg.result);
-    let data;
-    if (
-      msg.result.payload.parts !== undefined &&
-      msg.result.payload.parts.length > 0
-    ) {
-      data = msg.result.payload.parts[0].body.data;
-    } else if (msg.result.payload.body.size > 0) {
-      data = msg.result.payload.body.data;
-    }
-    msgs.push({
-      body: decode(data),
-      headers: msg.result.payload.headers
-    });
+    promises.push(getMessage(id));
   }
-  return msgs;
+  let messages = [];
+  await Promise.all(promises).then(msgs => {
+    for (const msg of msgs) {
+      let data;
+      if (
+        msg.result.payload.parts !== undefined &&
+        msg.result.payload.parts.length > 0
+      ) {
+        // If HTML exists, use that
+        if (msg.result.payload.parts.length > 1) {
+          data = msg.result.payload.parts[1].body.data;
+        }
+        // Otherwise, use plaintext
+        // else {
+        //   data = msg.result.payload.parts[0].body.data;
+        // }
+      } else if (msg.result.payload.body.size > 0) {
+        data = msg.result.payload.body.data;
+      }
+      messages.push({
+        body: decode(data),
+        headers: msg.result.payload.headers
+      });
+    }
+  });
+  return messages;
 }
 
 function decode(input) {
-  if (input == undefined) {
+  if (input === undefined) {
     return null;
   }
   // Replace non-url compatible chars with base64 standard chars
