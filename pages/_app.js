@@ -3,6 +3,7 @@ import { SWRConfig } from "swr";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { checkSignInStatus } from "../api/auth";
+import "../styles/vars.css";
 
 function MyApp({ Component, pageProps }) {
   const [token, setToken] = useState("");

@@ -1,19 +1,15 @@
 import React from "react";
+import EmailPreview from "./EmailPreview";
+import Email from "../types/EmailInterface";
 
 interface IProps {
   emails: Email[];
 }
 
-interface Email {
-  headers: Header[];
-  body: string;
-}
+export default function Emails({ emails }: IProps) {
+  const prevs = emails.map((email, index) => (
+    <EmailPreview email={email} key={index} />
+  ));
 
-interface Header {
-  name: string;
-  value: string;
-}
-
-export default function Emails(props: IProps) {
-  return <h1>Emails go here</h1>;
+  return <div>{prevs}</div>;
 }

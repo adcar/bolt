@@ -62,7 +62,8 @@ export async function getMessages() {
       }
       messages.push({
         body: decode(data),
-        headers: msg.result.payload.headers
+        headers: msg.result.payload.headers,
+        snippet: msg.result.snippet
       });
     }
   });

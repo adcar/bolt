@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+}
+.name {
+  width: 200px;
+}
+
+.subject {
+  width: 100%;
+}
+
+.name,
+.subject {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-primary);
+  padding: var(--spacing);
+}
+
+.snippet {
+  color: var(--text-secondary);
+}
