@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SignOut from "../components/SignOut";
-export default function dashboard() {
+import { listLabels } from "../api/auth";
+export default function dashboard({ token }) {
+  useEffect(() => {
+    if (token !== "") {
+      listLabels();
+    }
+  }, [token]);
+
   return (
     <>
       <SignOut />

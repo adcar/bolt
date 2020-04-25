@@ -46,7 +46,12 @@ function MyApp({ Component, pageProps }) {
         <script src="https://apis.google.com/js/api.js" />
       </Head>
 
-      <Component {...pageProps} onSignIn={setToken} onSignOut={setToken} />
+      <Component
+        {...pageProps}
+        onSignIn={setToken}
+        onSignOut={setToken}
+        token={token}
+      />
     </SWRConfig>
   );
 }
