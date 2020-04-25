@@ -15,7 +15,7 @@ export const initGmailClient = () => {
   // Authorization scopes required by the API; multiple scopes can be
   // included, separated by spaces.
   // More info: https://developers.google.com/identity/protocols/googlescopes
-  const SCOPES = "https://mail.google.com/"; // Scope for Read, send, delete, and manage your email
+  const SCOPES = "https://mail.google.com/"; // Scope for Read, send, delete, and manage your id
 
   const gapi = window.gapi;
 
