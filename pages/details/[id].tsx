@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
+export default function id(props) {
+  console.log(props);
+  useEffect(() => {
+    const emails = localStorage.getItem("emails");
+    console.log(JSON.parse(emails));
+  }, []);
 
-export default function id(){
-    return (
-        <div>
-            <p>This is a email page.@#$%^&*(</p>
-        </div>
-    )
+  return (
+    <div>
+      <p>This is a email page.@#$%^&*(</p>
+    </div>
+  );
 }

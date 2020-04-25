@@ -9,10 +9,10 @@ function MyApp({ Component, pageProps }) {
   const [token, setToken] = useState("");
   const [emails, setEmails] = useState(null);
   const router = useRouter();
+  console.log(emails);
   useEffect(() => {
     init();
   }, []);
-
 
   function init() {
     gapi.load("client:auth2", initClient);
@@ -57,7 +57,10 @@ function MyApp({ Component, pageProps }) {
         onSignIn={setToken}
         onSignOut={setToken}
         token={token}
-        setEmails={setEmails}
+        setEmails={emails => {
+          setEmails(emails);
+          localStorage.setItem("emails", JSON.stringify(emails));
+        }}
         emails={emails}
       />
     </SWRConfig>
